@@ -32,6 +32,7 @@ def api_response(request):
         response = predict(data)
         response = {"response":response}
         return response
+        # JOSN Test file for Postman: postmanTest.json
     except Exception as e:
         print(e)
         error = {"error": "Something went wrong!! Try again"}
