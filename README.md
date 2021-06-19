@@ -4,7 +4,7 @@
 * [DVC Initialisation](#dvc-initialisation)
 * [Unit Test setup](#unit-test-setup)
 * [CICD pipeline](#cicd-pipeline)
-* [Creating and Distibuting Package](#creating-and-distibuting-package)
+* [Creating and Distributing Package](#creating-and-distributing-package)
 
 # Overview
 * Create a machine learning model
@@ -78,7 +78,7 @@ Configure /workflows/ci-cd.yaml
 * Run unit tests
 * Provide Heroku specific Token and App name to trigger deployment on Heroku
 
-# Creating and Distibuting Package
+# Creating and Distributing Package
 ```bash
 pip install -e . 
 ```
