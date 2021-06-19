@@ -1,30 +1,43 @@
-create env 
+# E2E Project
+* [Overview](#overview)
+* [Project Setup](#project-setup)
+* [DVC Initialisation](#dvc-initialisation)
+* [Unit Test setup](#unit-test-setup)
+* [CICD pipeline](#cicd-pipeline)
+* [Creating and Distibuting Package](#creating-and-distibuting-package)
 
+# Overview
+* Create a machine learning model
+* Create a continuous integration continuous deployment pipeline
+* Deploy Model to Heroku
+* Whenever a new commit is made to the project, deployment ot **Heroku** will be triggered
+
+# Project Setup
+* Create env 
 ```bash
 conda create -n wineq python=3.7 -y
 ```
-
-activate env
+* Activate env
 ```bash
 conda activate wineq
 ```
-
-created a req file
-
-install the req
+* Install the requirments
 ```bash
 pip install -r requirements.txt
 ```
-download the data from 
-
-https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
-
+* Git Initialisation
 ```bash
 git init
 ```
+
+# DVC Initialisation
+* Download the data from 
+  * https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
+* Initialise DVC
 ```bash
 dvc init 
 ```
+* Add files to dvc
 ```bash
 dvc add data_given/winequality.csv
 ```
@@ -34,9 +47,7 @@ git add .
 ```bash
 git commit -m "first commit"
 ```
-
-oneliner updates  for readme
-
+* Oneliner updates  for readme
 ```bash
 git add . && git commit -m "update Readme.md"
 ```
@@ -46,20 +57,28 @@ git branch -M main
 git push origin main
 ```
 
-tox command -
+# Unit Test setup
+* tox command -
 ```bash
 tox
 ```
-for rebuilding -
+* tox command for rebuilding
 ```bash
 tox -r 
 ```
-pytest command
+* pytest command
 ```bash
 pytest -v
 ```
+# CICD pipeline
+Configure /workflows/ci-cd.yaml
+* Choose container for the app
+* Install Python 
+* Install requirements for the project
+* Run unit tests
+* Provide Heroku specific Token and App name to trigger deployment on Heroku
 
-setup commands -
+# Creating and Distibuting Package
 ```bash
 pip install -e . 
 ```
