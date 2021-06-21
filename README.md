@@ -52,7 +52,7 @@ git commit -m "first commit"
 git add . && git commit -m "update Readme.md"
 ```
 ```bash
-git remote add origin https://github.com/c17hawke/simple-dvc-demo.git
+git remote add origin https://github.com/sbhrwl/ml-MlFlow-CICD.git
 git branch -M main
 git push origin main
 ```
