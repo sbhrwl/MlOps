@@ -4,6 +4,7 @@
 * [DVC Initialisation](#dvc-initialisation)
 * [Unit Test setup](#unit-test-setup)
 * [CICD pipeline](#cicd-pipeline)
+* [ML Ops](#ml-ops)
 * [Creating and Distributing Package](#creating-and-distributing-package)
 
 # Overview
@@ -77,6 +78,19 @@ Configure /workflows/ci-cd.yaml
 * Install requirements for the project
 * Run unit tests
 * Provide Heroku specific Token and App name to trigger deployment on Heroku
+
+# ML Ops
+* ML Ops is machine learning specific Dev Ops methodology
+* Usually the concept of DevOps/CICD pipeline remains same with focus on **Model Retraining**
+* A Typical MLOps pipeline would consists of below stages
+  * Data Gathering
+  * EDA
+  * Feature Engineering
+  * Feature Selection
+  * Model Creation
+  * Model Deployment
+  * **Retraining Approach**
+  * Deployment to different environments (Test/Development/Production)
 
 # Creating and Distributing Package
 ```bash
