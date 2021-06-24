@@ -16,11 +16,11 @@
 # Project Setup
 * Create env 
 ```bash
-conda create -n wineq python=3.7 -y
+conda create -n projectenv python=3.7 -y
 ```
 * Activate env
 ```bash
-conda activate wineq
+conda activate projectenv
 ```
 * Install the requirments
 ```bash
@@ -40,7 +40,7 @@ dvc init
 ```
 * Add files to dvc
 ```bash
-dvc add data_given/winequality.csv
+dvc add data_given/dataset_source.csv
 ```
 ```bash
 git add .
